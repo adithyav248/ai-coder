@@ -27,8 +27,10 @@ function App() {
 
     try {
       // 2. Send to Backend
-      const response = await axios.post('http://localhost:5000/chat', {
-        message: input
+      // Use environment variable if available, otherwise default to localhost
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await axios.post(`${API_URL}/chat`, {
+              message: input
       });
 
       // 3. Add AI response to UI
