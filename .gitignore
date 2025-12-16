@@ -1,0 +1,14 @@
+# Ignore Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python dependencies and compiled files
+__pycache__/
+*.py[cod]
+backend/venv/
+backend/.env
+backend/generated_files/
+
+# Ignore React dependencies (files are too big)
+frontend/node_modules/
+frontend/dist/
